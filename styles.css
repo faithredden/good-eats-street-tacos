@@ -1,0 +1,356 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* ------FONTS------*/
+
+h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size:40px;
+}
+h2{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size:30px;
+}
+h3{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size:25px;
+}
+nav a{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size:20px;
+}
+menu li{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size:20px;
+}
+#socials li{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size:20px;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+footer{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size:20px;
+}
+dd{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}  
+li{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+nav{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+   
+}
+nav span{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size:20px;
+}
+input{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+.timedetails dt{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.side-dishes dt{
+     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+.side-dishes dd{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+/*----- STYLE-----*/
+html{
+    background-color:rgba(122,191,191,.5);
+}
+body{
+   max-width:414px;
+    background-color:#f2f2f2;
+    margin:0 auto;
+    display:grid;
+    grid-template-areas:
+        "header"
+        "timedetails"
+        "ingredients"
+        "directions"
+        "aside"
+        "footer";
+}
+/*-----HAMBURGER MENU/NAV------*/
+nav h2{
+    visibility:hidden;
+}
+nav ul{
+    background-color: #ffffff;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    list-style: none;
+    
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding-top: 8px;
+    padding-bottom:8px;
+    padding-left:28px;
+    padding-right:28px;
+    user-select: none;
+    background: white;
+    position:absolute;
+    top:0%;
+    box-shadow: 0px 3px  rgba(0,0,0,.15);
+}
+label span, label svg{
+    display: block;
+}
+nav input {
+    display: none;
+}
+nav input:checked ~ ul {
+    max-height: 500px;
+}
+nav input:checked ~ label span {
+    background: transparent;
+}
+nav input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+nav input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+nav input:checked ~ label:not(.steps) span:before, nav input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+nav a{
+    text-decoration: none;
+    color:#EB5428;  
+}
+
+nav a img{
+    height:50px;
+    width:50px;
+}
+nav {
+    padding-top:30px;
+}
+nav a img, nav a{
+    display:inline;
+}
+nav{
+    position:absolute;
+    top:0;
+}
+#logo svg{
+    position: absolute;
+    top:0;
+    left:61%;
+    background: #eb5428;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left:90px;
+    padding-right:90px;
+}
+#logo span{
+    visibility: hidden;
+}
+#avatar{
+    position: absolute;
+    top:0%;
+    left:324px;
+    background:#ffffff;
+    width:70px;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-right:10px;
+    padding-left:10px;
+    color: black;
+    box-shadow: 0px 3px  rgba(0,0,0,.15);
+    }
+ #avatar svg{
+    stroke:#EB5428;
+    width:100%
+    }
+
+/*------------------------*/
+form button{
+    background:#eb5428;
+    border:solid;
+    border-color:#EB5428;
+    padding-left:5px;
+    padding-right:5px;
+    padding-top:2px;
+}
+
+form input{
+    padding-top:5px;
+    padding-bottom:5px;
+    border:2px solid #eb5428;
+}
+form{
+    display:flex;
+    position:relative;
+
+    left:15%;
+}
+
+header {
+    width:414px;
+    padding-top: 200px;
+    grid-area:header;
+}
+header h1{
+    text-align: center;
+}
+.street-tacos img{
+    width:100%;
+}
+.street-tacos p{
+    padding:10px;
+}
+menu{
+    display:flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    padding-top:10px;
+}
+menu li{
+    list-style: none;
+}
+menu a {
+    text-decoration: none;
+    color:#EB5428;
+}
+menu span, menu a{
+    display:block;
+    text-align: center;
+}
+.timedetails {
+    width:414px;
+}
+.timedetails h2{
+    text-align: center;
+    padding-top:10px;
+}
+.timedetails dl{
+    width: 100%;
+    padding:10px;
+}
+.timedetails dt{
+    width:30%;
+    float:left;
+    clear: left;
+    padding:1px;
+}
+.timedetails dd{
+    padding:1px;
+}
+.ingredients{
+    grid-area:ingredients;
+    width: 414px;
+}
+.ingredients h2{
+    text-align: center;
+    padding:5px;
+}
+.ingredients ul{
+    padding-left:20px;
+}
+.ingredients li{
+    padding: 5px;
+}
+.directions {
+    grid-area: directions;
+    width:414px;
+}
+.directions h2{
+    text-align: center;
+    padding:5px;
+}
+.directions ol{
+    padding-left:20px;
+    padding-bottom: 5px;
+}
+.directions li{
+    padding: 10px;
+}
+aside{
+    grid-area:aside;
+    width:414px;
+    background: #7abfbf;
+}
+.side-dishes h2{
+    text-align: center;
+    padding-top:10px;
+}
+.side-dishes img{
+    width:100px;
+    padding:5px;
+}
+.side-dishes section{
+    padding:10px;
+    display: grid;
+    grid-template-columns: 110px auto;
+    grid-template-rows: 40px 40px 30px;
+    width:375px;
+    
+}
+.side-dishes img{
+    grid-column: 1/2;
+    grid-row:1 /4;
+}
+.side-dishes h3{
+    padding:2px;
+    grid-column: 2 /3;
+    grid-row:1 / 2;
+}
+.side-dishes dl{
+    grid-column: 2 /3;
+    grid-row: 2 / 3;
+}
+.side-dishes dd{
+    line-height: 2em;
+}
+.side-dishes .star{
+    grid-column:2 / 3;
+    grid-row:3 /4;
+    padding-top: 10px;
+}
+    
